@@ -70,8 +70,8 @@ def load(): #data loading
     data_2 = pd.concat([df1[df1['zone']== 2],df3[df3['zone']== 2],df2[df2['zone']== 2]])
     data_3 = pd.concat([df1[df1['zone']== 3],df3[df3['zone']== 3],df2[df2['zone']== 3]])
 
-    MAX = pd.Series({'DEN': 2.8, 'DTC': 125.80, 'GR': 200.00, 'RT_log':4.10})
-    MIN = pd.Series({'DEN': 1.7, 'DTC': 55.50, 'GR': 30.00, 'RT_log':-0.1})
+    MAX = pd.Series({'DEN': , 'DTC': , 'GR': , 'RT_log':}) //Enter the maximum and minimum values
+    MIN = pd.Series({'DEN': , 'DTC': , 'GR': , 'RT_log':})
 
     Data_1= datapro(data_1)
     Data_2= datapro(data_2)
@@ -86,7 +86,7 @@ def load(): #data loading
     X_TrainSet = TrainSet[['DEN','DTC','GR','RT_log']]
     Y_TrainSet = Y[['DTS']]
 
-    x_train, x_test, y_train, y_test = train_test_split(X_TrainSet, Y_TrainSet, test_size=0.3, random_state=100)  # ,
+    x_train, x_test, y_train, y_test = train_test_split(X_TrainSet, Y_TrainSet, test_size=0.3, random_state=100)  
     x_train = np.array(x_train)
     x_test = np.array(x_test)
     y_train = np.array(y_train)
