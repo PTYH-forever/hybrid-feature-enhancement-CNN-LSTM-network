@@ -101,15 +101,15 @@ def load(): #data loading
 
 x_train, y_train, x_test, y_test,TestWell,MAX,MIN= load()
 
-output_dim = 1  #输出维度
+output_dim = 1  
 batch_size =32
-epochs = 600 #
+epochs = 600 
 filiter = 128
 
 TIME_STEPS = 5
-INPUT_DIM = 4  #输入维度
+INPUT_DIM = 4  
 
-#模型搭建
+
 kernel_initializer = initializers.glorot_uniform(seed=0)
 recurrent_initializer = initializers.Orthogonal(gain=1.0, seed=0)
 inputs = Input(shape=(TIME_STEPS, INPUT_DIM))
